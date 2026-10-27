@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Snake — Arcade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">▦</span><span>SNAKE<span class="muted">.ARCADE</span></span></div>
+      <div class="status"><span class="status-dot"></span> READY TO PLAY</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">CLASSIC ARCADE · REIMAGINED</p>
+      <h1>Stay sharp.<br /><span>Keep growing.</span></h1>
+      <p class="subtitle">Eat, grow, and see how long you can survive.</p>
+    </section>
+
+    <section class="game-layout" aria-label="Snake game">
+      <div class="game-panel">
+        <div class="panel-top">
+          <div><span class="live-dot"></span> GAME SESSION</div>
+          <div id="gameStatus">READY</div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="game" width="600" height="600" aria-label="Snake game board"></canvas>
+          <div id="overlay" class="overlay">
+            <div class="overlay-card">
+              <div class="overlay-icon">▶</div>
+              <h2 id="overlayTitle">Ready?</h2>
+              <p id="overlayText">Collect food. Avoid the walls and your tail.</p>
+              <button id="startBtn" class="primary-btn">Start game <span>→</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="game-footer">
+          <span><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> MOVE</span>
+          <span><kbd>SPACE</kbd> PAUSE</span>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="stat-card">
+          <p class="card-label">CURRENT SCORE</p>
+          <div id="score" class="score">000</div>
+          <div class="stat-bottom"><span class="tiny-dot"></span> THIS SESSION</div>
+        </div>
+        <div class="stat-card best-card">
+          <p class="card-label">PERSONAL BEST</p>
+          <div id="best" class="score">000</div>
+          <div class="stat-bottom">SAVED ON THIS DEVICE</div>
+        </div>
+        <div class="help-card">
+          <p class="card-label">HOW TO PLAY</p>
+          <div class="help-row"><span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span><span class="help-text">Move snake</span></div>
+          <div class="help-row"><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span><span class="help-text">Or use arrows</span></div>
+          <div class="help-row"><span class="keycap wide">SPACE</span><span class="help-text">Pause / resume</span></div>
+          <div class="help-row"><span class="keycap wide">ENTER</span><span class="help-text">Start / restart</span></div>
+        </div>
+        <button id="restartBtn" class="secondary-btn">↻ <span>Restart game</span></button>
+      </aside>
+    </section>
+
+    <div class="mobile-controls" aria-label="Touch controls">
+      <button data-dir="up" aria-label="Move up">↑</button>
+      <div class="control-row">
+        <button data-dir="left" aria-label="Move left">←</button>
+        <button data-dir="down" aria-label="Move down">↓</button>
+        <button data-dir="right" aria-label="Move right">→</button>
+      </div>
+    </div>
+
+    <footer><span>BUILT FOR THE NEXT HIGH SCORE</span><span>NO DOWNLOAD · PLAY IN YOUR BROWSER</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
